@@ -7,10 +7,11 @@ OpenSource SQLite Library in Swift
 ##### 2.Create ```Objectiv-C``` header file, import sqlitelib to header file
 ##### 3.Then copy ```SQLiteDB_v*.swift``` in project.
 
-####note : 
-  SQLiteDB_v2.1.swift based on Swift  2.1 
+#### note : 
+
+##### SQLiteDB_v2.1.swift based on Swift  2.1
   
-  SQLiteDB_v3.0.swift based on Swift  3.0
+##### SQLiteDB_v3.0.swift based on Swift  3.0
 
 ----
 ### Usage
