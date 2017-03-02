@@ -27,7 +27,7 @@ let column =
         ]
 
 db.createTable(tableName: "student", withColumnNamesAndParam: column)
-db.executeChange("INSERT INTO student (firstname, lastname, age, studentNumber) VALUES('Mohsen', 'Jahangiri', 30, '9150535')")
+db.executeChange(sqlStr: "INSERT INTO student (firstname, lastname, age, studentNumber) VALUES('Mohsen', 'Jahangiri', 30, '9150535')")
 
 let records:[DB.DBRow] = db.executeQuery(sqlStr: "SELECT * FROM student ORDER BY studentNumber ASC")   
 
