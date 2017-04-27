@@ -171,9 +171,10 @@ class DB {
         
         for i:Int32 in 0..<columnCount {
           let columnName = String(cString: sqlite3_column_name(pStmt, i))
-          let columnType = String(cString: sqlite3_column_decltype(pStmt, i)).uppercased()
+          let column_decltype = sqlite3_column_decltype(pStmt, i)
           
-          if !columnType.isEmpty {
+          if column_decltype != nil {
+            let columnType = String(cString: column_decltype!).uppercased()
             if let columnValue: AnyObject = getColumnValue(statement: pStmt!, index: i, type: columnType) as AnyObject? {
               row[columnName] = DBColumn(obj: columnValue)
             }
